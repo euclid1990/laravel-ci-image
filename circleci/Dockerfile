@@ -15,6 +15,7 @@ RUN rm -rf /var/lib/apt/lists/* && \
     postfix \
     mailutils \
     memcached \
+    sasl2-bin \
     libpq-dev \
     libmemcached-dev \
     libjpeg-dev \
@@ -30,6 +31,12 @@ RUN rm -rf /var/lib/apt/lists/* && \
     libxml2-dev \
     libzzip-dev \
     libpcre3-dev \
+    libzip-dev \
+    liblz4-dev \
+    libevent-dev \
+    libsasl2-2 \
+    libsasl2-dev \
+    libsasl2-modules \
     --no-install-recommends apt-utils \
     && rm -r /var/lib/apt/lists/*
 
@@ -40,7 +47,7 @@ RUN docker-php-ext-configure gd \
     --with-freetype-dir=/usr/include/freetype2
 
 # Install mongodb, xdebug, memcached, mcrypt
-RUN pecl install mongodb xdebug memcached-3.1.3 mcrypt-1.0.2 \
+RUN pecl install mongodb xdebug memcached-3.1.3 mcrypt-1.0.2 memcached-3.1.3 \
     && docker-php-ext-enable mongodb xdebug memcached mcrypt
 
 # Install extensions using the helper script provided by the base image
