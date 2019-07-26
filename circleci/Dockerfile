@@ -1,4 +1,4 @@
-FROM circleci/php:7.2.9-fpm-stretch
+FROM circleci/php:7.2.17-fpm-stretch
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
