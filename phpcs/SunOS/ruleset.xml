@@ -2,7 +2,6 @@
 <ruleset name="SunOS">
   <description>The SunOS Coding Standard package for Code Sniffer.</description>
   <exclude-pattern>.documents</exclude-pattern>
-  <exclude-pattern>.circleci</exclude-pattern>
   <exclude-pattern>.github</exclude-pattern>
   <exclude-pattern>.envs</exclude-pattern>
   <exclude-pattern>public</exclude-pattern>
